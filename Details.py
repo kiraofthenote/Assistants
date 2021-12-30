@@ -1,5 +1,3 @@
-my_email = 'avkhalkar@gmail.com'
-password = 'aditya_237'
 # my_kira_email = your email
 # my_kira_password = your password
 Records = {
