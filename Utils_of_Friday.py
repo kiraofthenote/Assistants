@@ -303,8 +303,6 @@ def see_diary():
             fh.close()
             speak_and_print_with_Friday(network_error)
             exit()
-        elif unknown_value_error in response:
-            speak_and_print_with_Friday(unknown_value_error)
     else:
         fh.close()
 
