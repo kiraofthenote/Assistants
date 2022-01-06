@@ -346,7 +346,7 @@ def send_email():
     except smtplib.SMTPAuthenticationError:
         speak_and_print_with_Jarvis('Sorry sir but I am not allowed to access your emails')
     try:
-        server.sendmail(Details.my_kira_email, to, content)# server.sendmail('youremail', 'receiveremail', 'I am a good boy')
+        server.sendmail(Details.my_kira_email, to, content)# server.sendmail('youremail', 'receiveremail', 'message')
         error = False
     except smtplib.SMTPSenderRefused:
         error = True
