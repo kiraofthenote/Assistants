@@ -371,7 +371,7 @@ def send_email():
         speak_and_print('Email succesfully sent')
 
 
-def chatboat():
+def chatbot():
     wish()
     text = ''
     n = 1
