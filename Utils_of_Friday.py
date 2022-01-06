@@ -355,7 +355,7 @@ def send_email():
         speak_and_print_with_Friday('Email succesfully sent, Sir')
 
 
-def chatboat_with_Friday():
+def chatbot_with_Friday():
     wish()
     text = ''
     n = 1
