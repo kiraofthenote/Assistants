@@ -60,8 +60,8 @@ def speak(statement):
         # pip uninstall playsound
         # and then re-installing it's 1.2.2 version by typing in
         # pip install playsound==1.2.2
-        # As your PC may be facing some plug-in errors
-        # SO there is a great chance that this handy alternative will resolve your issue amicably
+        # As your PC may be facing some plug-in errors so lowering your playsound version is a good approach
+        # Hence there is a great chance that this handy alternative will resolve your issues amicably
     except gtts.tts.gTTSError:
         os.remove('Voice.mp3')
         print(gtts_error)
@@ -362,7 +362,7 @@ def send_email():
     except smtplib.SMTPAuthenticationError:
         speak_and_print('Sorry but I am not allowed to access your emails')
     try:    
-        server.sendmail(Details.my_kira_email, to, content)# server.sendmail('youremail', 'receiveremail', 'I am a good boy')
+        server.sendmail(Details.my_kira_email, to, content)# server.sendmail('youremail', 'receiveremail', 'message')
         error = False
     except smtplib.SMTPSenderRefused:
         error = True
