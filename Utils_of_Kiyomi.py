@@ -18,7 +18,7 @@ limit_search = 'enough search'
 limit_search_location = 'enough location'
 gtts_error = 'You are offline'
 limit_wiki = 'enough Wikipedia'
-limit_songs = 'enough songs'
+limit_songs = 'enough song'
 limit_diary = 'no'
 
 
@@ -56,10 +56,17 @@ def speak(statement):
         print(playsound_error)
         os.remove('Voice.mp3')
         exit()
+        # If you face this consider uninstalling your playsound module using command prompt by typing in
+        # pip uninstall playsound
+        # and then re-installing it's 1.2.2 version by typing in
+        # pip install playsound==1.2.2
+        # As your PC may be facing some plug-in errors
+        # SO there is a great chance that this handy alternative will resolve your issue amicably
     except gtts.tts.gTTSError:
         os.remove('Voice.mp3')
         print(gtts_error)
         exit()
+        
         
       
 def speech_to_text():
