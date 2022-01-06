@@ -355,7 +355,7 @@ def send_email():
         speak_and_print_with_Jarvis('Email succesfully sent, Sir')
 
 
-def chatboat_with_Jarvis():
+def chatbot_with_Jarvis():
     wish()
     text = ''
     n = 1
