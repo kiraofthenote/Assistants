@@ -191,6 +191,8 @@ def open_wikipedia():
                 speak_and_print_with_Friday('Sir')
             except PageError:
                 speak_and_print_with_Friday(f'Sorry, but I did not find anything for {query}, Sir')
+            except Exception:
+                speak_and_print(f'Sorry but I can not tell what exactly is {query} Sir')
         n += 1
     else:
         speak_and_print_with_Friday('Sir')
