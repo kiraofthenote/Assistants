@@ -192,7 +192,7 @@ def open_wikipedia():
             except PageError:
                 speak_and_print_with_Jarvis(f'Sorry, but I did not find anything for {query} Sir')
             except Exception:
-                speak_and_print(f'Sorry but I can not tell what exactly is {query} Sir') # Sometimes words with the same spelling may have a different meaning
+                speak_and_print(f'Sorry but I can not tell what exactly is {query} Sir')
         n += 1
     else:
         speak_and_print_with_Jarvis('Sir')
