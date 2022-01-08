@@ -180,7 +180,7 @@ def open_wikipedia():
     import wikipedia as wiki
     query = ''
     n = 1
-    while limit_wiki not in query(): 
+    while limit_wiki not in query: 
         if n == 1:
             question = 'Search whose wikipedia'
             speak_and_print(question)
