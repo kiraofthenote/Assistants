@@ -309,7 +309,7 @@ def see_diary():
                 bye()
             elif network_error in response:
                 fh.close()
-                speak_and_print(network_error)
+                speak_and_print_with_Friday(network_error)
                 exit()
         else:
             fh.close()
