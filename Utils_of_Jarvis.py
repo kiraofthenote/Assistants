@@ -292,21 +292,27 @@ def make_diary():
 def see_diary():
     updates = date_details()
     file = (f'{updates}.txt')
-    speak_and_print_with_Jarvis('Tell me to close the file when you want it to be, Sir')
-    fh = open(file, 'r')
-    speak_and_print_with_Jarvis(fh.read())
-    response = ''
-    while response != 'close':
-        response = speech_to_text()
-        if 'exit' in response:
+    try:    
+        fh = open(file, 'r')
+        speak_and_print_with_Jarvis(fh.read())
+        diary_exists = True
+    except Exception:
+        speak_and_print_with_Jarvis('You have not made a diary today, Sir') # It just shows that day's diary
+        diary_exists = False
+    if diary_exists:
+        speak_and_print_with_Jarvis('Tell me to close the file when you want it to be, Sir')
+        response = ''
+        while response != 'close':
+            response = speech_to_text()
+            if 'exit' in response:
+                fh.close()
+                bye()
+            elif network_error in response:
+                fh.close()
+                speak_and_print_with_Jarvis(network_error)
+                exit()
+        else:
             fh.close()
-            bye()
-        elif network_error in response:
-            fh.close()
-            speak_and_print_with_Jarvis(network_error)
-            exit()
-    else:
-        fh.close()
     
 
 def send_email():
