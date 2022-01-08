@@ -208,8 +208,8 @@ def open_wikipedia():
             except PageError:
                 speak_and_print(f'Sorry, but I did not find anything for {query}')
             except Exception:
-                speak_and_print(f'Sorry but I can not tell what exactly is {query}') # Sometimes words with the same spelling may have a different meaning
-        n += 1
+                speak_and_print(f'Sorry but I can not tell what exactly is {query}.') 
+        n += 1                                                                        
     else:
         speak_and_print('kira')
     
