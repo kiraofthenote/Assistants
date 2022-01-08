@@ -294,13 +294,13 @@ def see_diary():
     file = (f'{updates}.txt')
     try:    
         fh = open(file, 'r')
-        speak_and_print(fh.read())
+        speak_and_print_with_Friday(fh.read())
         diary_exists = True
     except Exception:
-        speak_and_print('You have not made a diary today, Sir') # It just shows that day's diary
+        speak_and_print_with_Friday('You have not made a diary today, Sir') # It just shows that day's diary
         diary_exists = False
     if diary_exists:
-        speak_and_print('Tell me to close the file when you want it to be, Sir')
+        speak_and_print_with_Friday('Tell me to close the file when you want it to be, Sir')
         response = ''
         while response != 'close':
             response = speech_to_text()
@@ -309,7 +309,7 @@ def see_diary():
                 bye()
             elif network_error in response:
                 fh.close()
-                print(network_error)
+                speak_and_print(network_error)
                 exit()
         else:
             fh.close()
